@@ -1,0 +1,159 @@
+.about {
+    position: relative;
+    background-color: $bg-color1;
+    height: 936px;
+    @media screen and (max-width: 768px) {
+            padding-top: 50px;
+        }
+}
+
+.about__container {
+    position: relative;
+}
+
+.about__img01 {
+    max-width: 558px;
+    position: absolute;
+    top: -10px;
+    left: -50px;
+    z-index: 2;
+}
+
+.about__content {
+    position: absolute;
+    top: 148px;
+    left: 442px;
+    z-index: 3;
+
+    @media screen and (max-width: 1130px) {
+        top: 80px;
+        left: 250px;
+    }
+
+    @media screen and (max-width: 650px) {
+        top: 80px;
+        left: 50px;
+    }
+
+    @media screen and (max-width: 420px) {
+        top: 15px;
+        left: 15px;
+    }
+}
+
+.about__title {
+    max-width: 402px;
+    margin-bottom: 42px;
+}
+
+.about__text {
+    max-width: 430px;
+    padding-left: 122px;
+
+
+    font-family: $accent-font;
+    line-height: 1.5;
+    color: $text-color;
+
+    @media screen and (max-width: 1130px) {
+        color: $primary-color;
+
+    }
+
+    @media screen and (max-width: 650px) {
+        padding-left: 50px;
+    }
+
+
+}
+
+.about__img02 {
+    position: absolute;
+    top: 505px;
+    right: 33px;
+    z-index: 2;
+}
+
+.about__img03 {
+    position: absolute;
+    top: 202px;
+    right: -265px;
+    z-index: 1;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+
+    }
+}
+
+.about__svg01 {
+    position: absolute;
+    top: 528px;
+    left: 373px;
+    z-index: 0;
+}
+
+.about__svg02 {
+    position: absolute;
+    top: 213px;
+    right: -150px;
+    z-index: 0;
+}
+
+.about__bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 95px;
+    background-color: $bg-color;
+}
+
+// Animation elements
+
+.about__img01 {
+    transform: translate(-150px, 0px);
+    opacity: 0;
+
+    @media screen and (max-width: 900px) {
+        transform: translate(150px, 0px);
+    }
+}
+
+.about__content {
+    transform: translate(0px, 50px);
+    opacity: 0;
+}
+
+.about__img02,
+.about__img03 {
+    transform: translate(150px, 0px);
+    opacity: 0;
+
+    @media screen and (max-width: 900px) {
+        transform: translate(-150px, 0px);
+    }
+}
+
+.about__img01._active,
+.about__content._active,
+.about__img02._active,
+.about__img03._active {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.about__img01._active {
+    transition-delay: 0.5s;
+}
+
+.about__content._active {
+    transition-delay: 1s;
+}
+
+.about__img02._active,
+.about__img03._active {
+    transition-delay: 0.5s;
+}

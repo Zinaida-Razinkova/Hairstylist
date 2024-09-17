@@ -1,0 +1,150 @@
+.focused {
+    position: relative;
+   
+    @media screen and (min-width: 768px) {
+        height: 750px;
+        padding-top: 24px;
+    }
+}
+
+.focused__container {
+    position: relative;
+
+    @media screen and (min-width: 768px) {
+
+        display: grid;
+        gap: 15px;
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 1240px;
+        margin: 0 auto;
+    }
+
+}
+
+.focused__content {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 768px) {
+        position: relative;
+        left: 10px;
+        max-width: 395px;
+        margin-top: 145px;
+        margin-bottom: 0;
+        z-index: 2;
+        padding: 0 10px 0 10px;
+    }
+
+         @media screen and (min-width: 1100px) {
+             left: -26px;
+         }
+    
+
+}
+
+.title__medium {
+    margin-bottom: 20px;
+}
+
+.focused__img {
+    position: relative;
+    z-index: 2;
+}
+
+.focused__svg01 {
+    position: absolute;
+    top: 150px;
+    left: -170px;
+    z-index: 0;
+}
+
+.focused__svg02 {
+    position: absolute;
+    left: 549px;
+    z-index: 1;
+
+    @media screen and (min-width: 768px) {
+        top: 242px;
+    }
+
+    @media screen and (max-width: 767.98px) {
+        left: 249px;
+        bottom: 0;
+    }
+}
+
+.focused__img01 {
+    @media screen and (min-width: 768px) {
+        position: absolute;
+        z-index: 1;
+        justify-self: start;
+        z-index: 0;
+    }
+
+}
+
+.focused__img02 {
+    @media screen and (min-width: 768px) {
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        margin-top: 165px;
+        z-index: 0;
+    }
+}
+
+.focused__bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 160px;
+    background-color: $bg-color1;
+
+}
+
+// Animation elements
+
+.focused__img01 {
+    transform: translate(-150px, 0px);
+    opacity: 0;
+
+    @media screen and (max-width: 900px) {
+        transform: translate(150px, 0px);
+    }
+}
+
+.focused__content {
+    transform: translate(0px, 50px);
+    opacity: 0;
+}
+
+.focused__img02 {
+    transform: translate(150px, 0px);
+    opacity: 0;
+
+    @media screen and (max-width: 900px) {
+        transform: translate(-150px, 0px);
+    }
+}
+
+.focused__img01._active,
+.focused__content._active,
+.focused__img02._active {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.focused__img01._active {
+    transition-delay: 0.5s;
+}
+
+.focused__content._active {
+    transition-delay: 1s;
+}
+
+.focused__img02._active {
+    transition-delay: 0.5s;
+}

@@ -1,0 +1,110 @@
+.footer {
+    background-color: $bg-color;
+    padding-top: 105px;
+    padding-bottom: 100px;
+
+    @media screen and (max-width: 860.98px) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+.footer__container {
+
+    @media screen and (min-width: 650px) {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        gap: 20px;
+    }
+}
+
+.footer__left {
+
+    @media screen and (min-width: 850px) {
+        display: flex;
+        column-gap: 77px;
+        margin-left: 64px;
+    }
+}
+
+.footer__block {
+    @media screen and (max-width: 849.98px) {
+        margin-bottom: 18px;
+    }
+}
+
+.footer__link {
+    display: block;
+    font-size: inherit;
+    font-family: $accent-font;
+    letter-spacing: -0.4px;
+    font-weight: 500;
+
+    &:not(:last-child) {
+        margin-bottom: 18px;
+
+        @media screen and (min-width: 600px) {
+            margin-bottom: 25px;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+.footer__right {
+
+
+    @media screen and (min-width: 600px) {
+        margin-right: 36px;
+    }
+           @media screen and (min-width: 650px) {
+                text-align: right;
+           }
+}
+
+.footer__title {
+    font-size: 30px;
+    letter-spacing: -1.13px;
+    margin-bottom: 16px;
+}
+
+.footer__button {
+    font-size: 30px;
+    letter-spacing: -1.13px;
+
+
+    @media screen and (min-width: 600px) {
+        margin-right: 22px;
+    }
+}
+
+// Animation elements
+
+.work__title {
+    transform: translate(-150px, 0px);
+    opacity: 0;
+}
+
+.work__text {
+    transform: translate(150px, 0px);
+    opacity: 0;
+}
+
+.work__title._active,
+.work__text._active {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.work__title {
+    transition-delay: 0.5s;
+}
+
+.work__text {
+    transition-delay: 1s;
+}

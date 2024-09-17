@@ -1,0 +1,126 @@
+.book {
+    background-color: $bg-color2;
+    padding-top: 150px;
+    padding-bottom: 150px;
+
+    @media screen and (max-width: 700px) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+.book__container {
+    position: relative;
+    max-width: 872px;
+    margin: 0 auto;
+    height: 682px;
+}
+
+.book__block {
+    position: relative;
+    z-index: 1;
+}
+
+.book__img-01 {
+    position: absolute;
+    width: 255px;
+    top: 455px;
+    left: 10px;
+    z-index: 1;
+}
+
+.book__img-02 {
+    position: absolute;
+    top: 102px;
+    left: 205px;
+    max-width: 458px;
+
+    @media screen and (max-width: 700px) {
+        left: 0px;
+    }
+}
+
+.book__img-03 {
+    position: absolute;
+    top: 0px;
+    right: -10px;
+    width: 305px;
+}
+
+.book__content {
+    position: absolute;
+    top: 361px;
+    right: 0;
+    z-index: 3;
+    max-width: 273px;
+}
+
+.book__title {
+    letter-spacing: 0.7px;
+    margin-bottom: 32px;
+}
+
+.book__decor01 {
+    position: absolute;
+    top: 269px;
+    left: -12px;
+}
+
+.book__decor02 {
+    position: absolute;
+    top: 170px;
+    right: 125px;
+
+    @media screen and (max-width: 600px) {
+        display: none;
+    }
+}
+
+// Animation elements
+
+.book__img-01 {
+    transform: translate(-150px, 0px);
+    opacity: 0;
+
+    @media screen and (max-width: 900px) {
+        transform: translate(150px, 0px);
+    }
+}
+
+.book__img-02,
+.book__content {
+    transform: translate(0px, 50px);
+    opacity: 0;
+}
+
+.book__img-03 {
+    transform: translate(150px, 0px);
+    opacity: 0;
+
+    @media screen and (max-width: 900px) {
+        transform: translate(-150px, 0px);
+    }
+}
+
+.book__img-01._active,
+.book__img-02._active,
+.book__img-03._active,
+.book__content._active {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.book__img01._active {
+    transition-delay: 0.5s;
+}
+.book__img02._active {
+    transition-delay: 1s;
+}
+.book__img03._active {
+    transition-delay: 0.5s;
+}
+
+.book__content._active {
+    transition-delay: 0.5s;
+}
