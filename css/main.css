@@ -715,10 +715,11 @@
 
 .services__design {
   margin-top: 32px;
+  position: relative;
+  z-index: 3;
 }
 @media screen and (min-width: 450px) {
   .services__design {
-    position: relative;
     margin-top: 88px;
     justify-self: end;
   }
@@ -727,7 +728,7 @@
 .services__design-img {
   margin-bottom: 32px;
   position: absolute;
-  z-index: 2;
+  z-index: 3;
 }
 @media screen and (max-width: 449.98px) {
   .services__design-img {

@@ -2,10 +2,11 @@
     padding-top: 8px;
     padding-bottom: 166px;
     background-color: $bg-color;
+
     @media screen and (max-width: 768px) {
-            padding-top: 50px;
-            padding-bottom: 60px;
-        }
+        padding-top: 50px;
+        padding-bottom: 60px;
+    }
 }
 
 .services__title {
@@ -38,9 +39,10 @@
     @media screen and (min-width: 450px) and (max-width: 650.98px) {
         height: 900px;
     }
-           @media screen and (min-width: 1280px) {
-               margin: 0 191px 0 242px;
-           }
+
+    @media screen and (min-width: 1280px) {
+        margin: 0 191px 0 242px;
+    }
 }
 
 .services__article {
@@ -51,20 +53,22 @@
     font-size: 30px;
     letter-spacing: -1.13px;
 
-a {
-    &:hover,
+    a {
+
+        &:hover,
         &:focus {
             color: $accent-color;
         }
-}
+    }
 }
 
-.service__article-link img{
+.service__article-link img {
+
     &:hover,
-        &:focus {
+    &:focus {
         transform: scale(1.1);
         transition: transform 0.5s ease 0s;
-        }
+    }
 }
 
 .services__cut {
@@ -107,9 +111,10 @@ a {
 
 .services__design {
     margin-top: 32px;
+    position: relative;
+    z-index: 3;
 
     @media screen and (min-width: 450px) {
-        position: relative;
         margin-top: 88px;
         justify-self: end;
     }
@@ -119,7 +124,7 @@ a {
 .services__design-img {
     margin-bottom: 32px;
     position: absolute;
-    z-index: 2;
+    z-index: 3;
 
     @media screen and (max-width: 449.98px) {
         margin-bottom: 12px;
@@ -199,6 +204,7 @@ a {
         transform: translate(-150px, 0px);
     }
 }
+
 .services__cut._active,
 .services__color._active,
 .services__content._active,
